@@ -1,0 +1,18 @@
+<mat-expansion-panel class="post-item" [class.expanded]="expanded" (opened)="opened()" (closed)="closed()">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            {{ post.title }}
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>{{ post.body }}</p>
+    <h3>Comments<span *ngIf="!loading">({{ comments.length }})</span></h3>
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    <p *ngIf="!loading && !comments.length">There are no comments for this post.</p>
+    <div class="comment-container" *ngIf="!loading && comments.length">
+        <div class="comment-elem" *ngFor="let comment of comments">
+            <div class="comment-name">Name: {{ comment.name }}</div>
+            <div class="comment-email">E-mail: {{ comment.email }}</div>
+            <div class="comment-body">{{ comment.body }}</div>
+        </div>
+    </div>
+</mat-expansion-panel>

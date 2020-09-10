@@ -1,0 +1,10 @@
+mat-form-field {
+    margin-bottom: 15px;
+}
+
+mat-spinner {
+    margin: 5px auto;
+    &::ng-deep circle {
+        stroke: #301639;
+    }
+}

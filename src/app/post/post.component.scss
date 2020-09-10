@@ -1,0 +1,24 @@
+mat-expansion-panel {
+    margin-bottom: 10px;
+    transition: transform 150ms ease-in-out;
+    &:not(.expanded):hover {
+        background-color: #eee;
+        transform: translateX(8px);
+    }
+}
+
+mat-spinner {
+    margin: 5px auto;
+    &::ng-deep circle {
+        stroke: #301639;
+    }
+}
+
+.comment-elem {
+    padding: 5px;
+    border: 2px solid #ddd;
+    margin-bottom: 3px;
+    .comment-name, .comment-email {
+        font-weight: 800;
+    }
+}

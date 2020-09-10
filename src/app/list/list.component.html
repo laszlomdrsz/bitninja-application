@@ -1,0 +1,25 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div *ngIf="currentPosts.length && !loading" class="post-list">
+    <div class="toolbar-container">
+        <button type="button" mat-raised-button (click)="newPost()">
+            <mat-icon>add</mat-icon><span class="hide-on-mobile">New post</span>
+        </button>
+        <mat-paginator 
+        [length]="allPosts.length" [pageSize]="pageCount" 
+        [pageIndex]="currentPage" (page)="showPage($event.pageIndex)">
+        </mat-paginator>
+    </div>
+    <app-post 
+        *ngFor="let post of currentPosts" [post]="post" 
+        [selected]="post === selectedPost" (click)="selectedPost = post">
+    </app-post>
+    <div class="toolbar-container">
+        <button type="button" mat-raised-button (click)="newPost()">
+            <mat-icon>add</mat-icon><span class="hide-on-mobile">New post</span>
+        </button>
+        <mat-paginator 
+        [length]="allPosts.length" [pageSize]="pageCount" 
+        [pageIndex]="currentPage" (page)="showPage($event.pageIndex)">
+        </mat-paginator>
+    </div>
+</div>

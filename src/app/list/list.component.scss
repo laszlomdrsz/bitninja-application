@@ -1,0 +1,27 @@
+mat-paginator {
+    width: max-content;
+}
+
+.toolbar-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    &>* {
+        height: 56px
+    }
+}
+
+mat-spinner {
+    margin: 30vh auto;
+    &::ng-deep circle {
+        stroke: #fff;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
