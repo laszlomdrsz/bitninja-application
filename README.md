@@ -4,4 +4,4 @@ This project was created as an application for Bitninja.io Frontend Developer po
 
 ## Working demo
 
-A working demo is available here: http://http://bitninja.webfejlesztomentor.hu/
+A working demo is available here: http://bitninja.webfejlesztomentor.hu/
